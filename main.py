@@ -82,7 +82,7 @@ large_font = pygame.font.SysFont("Arial", 60, bold=True)
 def draw_maze(grid, offset_x):
     for cell in grid:
         x = cell['x'] * TILE + offset_x
-        y = cell['y'] * TILE + 60  # +60 pushes it down below the score text
+        y = cell['y'] * TILE + 60
 
         walls = cell['walls']
         if walls['top']:    pygame.draw.line(screen, WHITE, (x, y), (x + TILE, y), 2)
